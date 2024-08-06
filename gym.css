@@ -1,0 +1,396 @@
+h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.top-bar {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+.contact-info, span{
+   margin-left: 50%;
+   color: white;
+}
+.contact-info,span:hover{
+    color: yellow;
+    cursor: grab;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    padding: 5px;
+    background-color:#333;
+}
+
+.logo img {
+    width: 10%;
+height: auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    transition: top 0.3s;
+    text-align: center;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    color: yellow;
+}
+
+/* Sticky navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    background: url('bg2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.text-content{
+    flex: 1;
+    color: black;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.text-content p{
+    flex: 1;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.bg{
+    flex: 1;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 200px;
+}
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: #000;
+}
+
+/* Adding transform-style CSS 
+    property to the boxes */
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+/* Adding keyframes for animation */
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+/* Adding CSS to all the span 
+    tags for animation */
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: 
+      rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect:
+below 0px linear-gradient(transparent, transparent, #0004);
+}
+
+/* Adding object-fit CSS property to all the images */
+.box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+}
+h2{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: yellow;
+    background-color: #000;
+}
+.membership-cards {
+    display: flex;
+    gap: 110px;
+    background: url('bg3.jpg') no-repeat center center fixed;
+    background-size: cover; 
+}
+.card {
+    width: 300px;
+    background-color: black;
+    border-radius: 10px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: grab;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.card-details {
+    padding: 20px;
+    text-align: center;
+}
+.card-details p {
+    background-color: black;
+    color: yellow;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.box2{
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h4{
+    text-align: center;
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: yellow;
+    background-color: #000;
+}
+
+.fas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: black solid;
+}
+.f {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 30px solid white;
+    box-shadow: 0 4px 8px white(0, 0, 0, 0.1);
+}
+
+.image-heading {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    text-align: center;
+    z-index: 1;
+}
+
+.f img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: grab;
+    transition: transform 0.3s ease;
+}
+
+.f:hover img {
+    transform: scale(1.05);
+}
+h5{
+    text-align: center;
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: yellow;
+    background-color: #000; 
+}
+.box3{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url('bg4.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container2 {
+    display: flex;
+    gap: 70px;
+    padding: 20px;
+}
+
+.mobile-screen {
+    text-align: center;
+    width: 300px;
+}
+
+.mobile-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    margin: 20px 0;
+    color: black;
+    font-size: 15px;
+}
+
+.store-logos {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.store-logo {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.store-logo:hover {
+    transform: scale(1.1);
+}
+.box4{
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: flex;
+}
+
+.logo-section {
+    margin: 20px 0;
+}
+.gym-logo {
+    width: 150px;
+    height: auto;
+}
+.contact-section {
+    padding: 20px;
+}
+
+.contact-section h1,
+.contact-section h2,
+.links h3,
+.company-links h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    margin: 5px 0;
+    color: white;
+}
+
+.links,
+.company-links {
+    margin: 20px 0;
+}
+
+.links ul,
+.company-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links li,
+.company-links li {
+    margin: 5px 0;
+}
+
+.links a,
+.company-links a {
+    text-decoration: none;
+    color: yellow;
+    transition: color 0.3s ease;
+}
+
+.links a:hover,
+.company-links a:hover {
+    color: white;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.join-now-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.join-now-btn:hover {
+    background-color: yellow;
+}
